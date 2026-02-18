@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANET CJ</title>
+   
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+  
+  <div class="cursor-dot" id="cursor"></div>
+
+
+
+<style>
+
+body {
+    cursor: none;
+}
+
+.cursor-dot {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ff3300;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    box-shadow: 0 0 12px #ff3300, 0 0 25px #aa0000;
+}
+body {
+    margin: 0;
+    background: black url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExam4xZ2VlazFmaXU0Znh6MnM4eDVrcjB5M2g4cmp6YnpscjJkN241cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RNWddWT66xO6j6CtYB/giphy.gif'); /* replace with your own gif */
+    background-size: 200px;
+    font-family: "Courier New", monospace;
+    color: #a30505;
+    overflow-x: hidden;
+    cursor: none;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    pointer-events: cursor;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.title {
+    font-size: 80px;
+    text-align: center;
+    color: #f73700;
+    text-shadow: 0 0 20px red, 0 0 40px orange;
+    animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+marquee {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.leftbar, .rightbar {
+    width: 200px;
+    position: absolute;
+    top: 150px;
+}
+
+.leftbar { left: 0; }
+.rightbar { right: 0; }
+
+.center {
+    margin: 0 220px;
+    background: rgba(0,0,0,0.85);
+    padding: 125px;
+    border: 3px double #cc4110;
+}
+
+/* boxes */
+.box {
+    border: 2px solid #186b4e;
+    padding: 5px;
+    margin-bottom: 20px;
+    background: rgba(20,10,0,0.8);
+}
+
+a {
+    color: #0e1fe9;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #5ac06f;
+    color: black;
+}
+
+.counter {
+    font-size: 18px;
+    color: red;
+    text-align: center;
+}
+
+.badge {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border: 2px solid red;
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.lyrics {
+    height: 500px;
+    overflow: auto;
+    font-size: 15px;
+    background: black;
+    border: 2px inset #d4af37;
+    padding: 10px;
+}
+
+.scrap {
+    width: 220px;
+    height: 180px;
+    background: black;
+    color: red;
+    padding: 10px;
+    position: absolute;
+    box-shadow: 5px 5px 25px black;
+    cursor: move;
+}
+
+.scrap img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    background: #ccc;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #cc4110;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="title">PLANET CJ</div>
+
+    <marquee scrollamount="10">
+        classic rock  -  heavy metal  -  the gov is out to get people  -  the CIA has visited this website  -  hit the links under 'explore,' but only if you dare... ;))
+    </marquee>
+
+    <div class="leftbar">
+        <div class="box">
+            <b>FOR THE GANGSTALKERS</b><br>
+            <a href="https://www.instagram.com/over2cj?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">insta</a><br>
+            <a href="https://open.spotify.com/user/cassiewassy6?si=a10a2ecaa4744713">spotify</a><br>
+            <a href="https://www.tumblr.com/over2cj">tumblr</a><br>
+            <a href="https://archive.org/details/@heresiiarch/uploads">internet archive</a>
+        </div>
+
+        <div class="box counter">
+           MAD DOG ISN'T JUST FOR BEER
+        </div>
+
+        <div class="badge">
+            <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Z2N2ZHhzNHUzY3pzOG9uOWZxd2ZmcmFuMTIzNGFrd3M3djhuOGZnZiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/Gbn8Y1Ef7OSYyUlzoE/giphy.gif" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+    </div>
+
+    <div class="rightbar">
+        <div class="box">
+            <b>EXPLORE</b><br>
+            <a href="https://planetcj.neocities.org/bstage">backstage</a><br>
+            <a href="https://planetcj.neocities.org/forecast">rain or shine?</a><br>
+            <a href="https://planetcj.neocities.org/farout">...far out, dude</a><br>
+            <a href="https://planetcj.neocities.org/entrypage">leave planet</a>
+        </div>
+
+        <div class="box">
+            <b>CONCRETE BLONDE - DAYS AND DAYS</b>
+            <div class="lyrics">
+                the dirty leaves are sailing<br>
+                on a hot wind ocean<br>
+                and the summer comes and the summer goes<br>
+                and always has and will<br>
+                and something, somewhere that you said<br>
+                goes ricochet all through my head<br>
+                and flashing like a neon sign, the time stood still
+            </div>
+        </div>
+    </div>
+
+    <div class="center">
+
+        <div class="box">
+            <h2>TO WHOM IT MAY CONCERN...</h2>
+            <p>
+                i have the most superior opinions on everything.<br> <br>
+                but don't take my word for it-- go ahead, ask me for my opinion:<br><br>
+                over2cj@proton.me
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>DISCLAIMER</h2>
+            <p>
+                 i'm annoying & cringe enough to give you CVD. try not to mald
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        est. 2006 • get on pc to use the site properly • reached the bottom already?
+    </div>
+
+</div>
+
+<div class="scrap" style="top: 500px; left: 300px;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Y3pidmozcXczZHlyMjV1cTdqbmVpcjcyZ3h1eG5yMXFldWJmaTV1OSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/EW413mLkSRNrvPm747/giphy.gif">
+    <p>drag me</p>
+</div>
+
+<div class="scrap" style="top: 700px; left: 700px;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3d2EwcmtjcXdzaXRybWltdjVwcmEwczA2cnB4NDNkZGY4OWQ4b3hncyZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/iyO0Eu4etKrTlB56gk/giphy.gif">
+    <p>drag me</p>
+</div>
+
+<script>
+
+const cursor = document.getElementById("cursor");
+document.addEventListener("mousemove", e => {
+    cursor.style.left = e.clientX - 7 + "px";
+    cursor.style.top = e.clientY - 7 + "px";
+});
+
+document.querySelectorAll('.scrap').forEach(el => {
+    el.onmousedown = function(e) {
+        let shiftX = e.clientX - el.getBoundingClientRect().left;
+        let shiftY = e.clientY - el.getBoundingClientRect().top;
+
+        function moveAt(pageX, pageY) {
+            el.style.left = pageX - shiftX + 'px';
+            el.style.top = pageY - shiftY + 'px';
+        }
+
+        function onMouseMove(e) {
+            moveAt(e.pageX, e.pageY);
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        el.onmouseup = function() {
+            document.removeEventListener('mousemove', onMouseMove);
+            el.onmouseup = null;
+        };
+    };
+    el.ondragstart = () => false;
+});
+</script>
+
+  
+  </body>
+</html>
