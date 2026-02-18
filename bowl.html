@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOWL ALLEY</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+  
+ <style>
+  body {
+    margin: 0;
+    background: black;
+    font-family: monospace;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    color: #45ff76;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #7f0000, 0 0 10px #7f0000;
+  }
+
+  .bowling-lane {
+    position: relative;
+    width: 90%;
+    height: 400px;
+    border-top: 2px solid #0ff;
+    margin-top: 50px;
+  }
+
+  .pin {
+    position: absolute;
+    width: 40px;
+    height: 120px; 
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .pin svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pin:hover svg path {
+    stroke: #00ffcc;
+    stroke-width: 2;
+  }
+
+  .ball {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f00;
+    transition: transform 0.8s ease;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0,255,255,0.05),
+      rgba(0,255,255,0.05) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  }
+</style>
+</head>
+<body>
+<h1>click a pin to read about a favorite band of mine (or click <a href="https://planetcj.neocities.org/music">THIS</a>
+ to head back to the music station)</h1>
+
+<div class="bowling-lane">
+  <div class="ball" id="ball"></div>
+
+ 
+  <script>
+    const lane = document.querySelector('.bowling-lane');
+    const pinsData = [
+      'https://planetcj.neocities.org/concreteb',
+      'https://planetcj.neocities.org/hart',
+      'https://planetcj.neocities.org/idkyet',
+      'https://planetcj.neocities.org/dramarama',
+      'https://planetcj.neocities.org/husker',
+      'https://planetcj.neocities.org/sabbath',
+      'https://planetcj.neocities.org/dinojr',
+      'https://planetcj.neocities.org/deflepp',
+      'https://planetcj.neocities.org/gotham',
+      'https://planetcj.neocities.org/tiltues'
+    ];
+
+    pinsData.forEach((link, index) => {
+      const pin = document.createElement('div');
+      pin.className = 'pin';
+      pin.style.left = `${5 + index*9}%`; 
+      pin.style.top = '50px';
+      pin.dataset.link = link;
+
+      pin.innerHTML = `
+        <svg viewBox="0 0 20 60">
+          <path d="M10 0 
+                   C13 0, 16 12, 15 25 
+                   C16 40, 10 55, 10 60 
+                   C10 55, 4 40, 5 25 
+                   C4 12, 7 0, 10 0" 
+                fill="white" stroke="#0ff" stroke-width="1"/>
+          <rect x="5" y="20" width="10" height="4" fill="red"/>
+        </svg>
+      `;
+
+      lane.appendChild(pin);
+    });
+  </script>
+</div>
+
+<script>
+const ball = document.getElementById('ball');
+
+document.querySelectorAll('.pin').forEach(pin => {
+  pin.addEventListener('click', () => {
+    const laneRect = lane.getBoundingClientRect();
+    const pinRect = pin.getBoundingClientRect();
+    const ballRect = ball.getBoundingClientRect();
+
+    const deltaX = (pinRect.left + pinRect.width/2) - (ballRect.left + ballRect.width/2);
+    const deltaY = (pinRect.top + pinRect.height/2) - (ballRect.top + ballRect.height/2);
+
+    ball.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+    ball.style.transition = "transform 0.8s ease";
+    pin.style.transform = "rotate(20deg)";
+    pin.style.transition = "transform 0.2s ease";
+    setTimeout(() => pin.style.transform = "rotate(0deg)", 200);
+
+    setTimeout(() => {
+      window.location.href = pin.dataset.link;
+    }, 800);
+  });
+});
+</script>
+  
+  
+  
+  
+  </body>
+</html>

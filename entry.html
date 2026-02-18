@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+  
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.entry-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #0000f7;
+    text-shadow: 2px 2px #f70b00;
+}
+
+.mobile-warning {
+    font-size: 0.9em;
+    color: #f70b00;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px #888fce;
+}
+
+.planet {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #adaddc, #1b1aca, #000037);
+    box-shadow: 0 0 35px #1000f9, 0 0 70px #7a03dd;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    text-shadow: 0 0 5px #fff;
+}
+
+.planet:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 50px #14dc29, 0 0 100px #14dccd;
+}
+
+.planet::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border: 2px dashed rgba(51,50,255,0.5);
+    border-radius: 50%;
+    top: -20px;
+    left: -20px;
+    animation: orbit 6s linear infinite;
+}
+
+@keyframes orbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 480px) {
+    .entry-title { font-size: 1.3em; }
+    .mobile-warning { font-size: 0.8em; margin-bottom: 20px; }
+    .planet { width: 150px; height: 150px; font-size: 0.9em; }
+    .planet::before { width: 180px; height: 180px; top: -15px; left: -15px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="entry-title">WELCOME TO PLANET CJ</div>
+<div class="mobile-warning">...which breaks on mobile devices. come back with your laptop/computer!</div>
+
+<a href="https://planetcj.neocities.org/" class="planet">CLICK 2 ENTER</a>
+  
+  </body>
+</html>

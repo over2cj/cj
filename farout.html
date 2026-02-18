@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAR OUT, DUDE...</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+  
+  
+<style>
+body {
+    margin: 0;
+    background: black url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTNkdTNjNXdncHc5ZXQ5MG8zb3VyZWRqMGlzOHN2ZXI4N3VoeGgzZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1Tz1pbJTQQg12/giphy.gif');
+    color: #e53c00;
+    font-family: "Courier New", monospace;
+    
+}
+
+.glow {
+    position: fixed;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(0,255,204,0.4);
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+.container {
+    width: 900px;
+    margin: 30px auto;
+    border: 4px ridge #ec0017;
+    background: #0b0b0f;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px double #ec0017;
+}
+
+.blink {
+    animation: blinker 1.2s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+.system-bar {
+    font-size: 12px;
+    background: #000449;
+    padding: 6px;
+    border-bottom: 2px dotted #1109bf;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sidebar {
+    width: 230px;
+    vertical-align: top;
+    border-right: 2px dotted #1109bf;
+    padding: 15px;
+}
+
+.content {
+    padding: 20px;
+}
+
+a {
+    color: #ec5600;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #ff1f0b;
+    color: black;
+}
+
+.link-block {
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 3px solid #1109bf;
+}
+
+.transmission {
+    height: 120px;
+    overflow: auto;
+    background: black;
+    border: 2px inset #1109bf;
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.tape {
+    text-align: center;
+    background: #099620;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    margin: 20px 0;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from { letter-spacing: 1px; }
+    to { letter-spacing: 4px; }
+}
+
+
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px dotted #1109bf;
+    font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow" id="glow"></div>
+
+<div class="container">
+
+    <div class="header">
+        <h1 class="blink">FAR OUT, DUDE...</h1>
+        <marquee scrollamount="6">:: caring about what's happening down on earth is SO retro :: have you seen the stars before? :: ask me about kubrick's moonlanding  :: </marquee>
+    </div>
+
+    <div class="system-bar">
+        "space may be the final frontier, but it's made in a hollywood basement..."
+    </div>
+
+    <table>
+        <tr>
+            <td class="sidebar">
+                <b>READY 4 MORE?</b>
+                <div class="link-block"><a href="https://planetcj.neocities.org/qa">site q/a with cj</a></div>
+                <div class="link-block"><a href="https://planetcj.neocities.org/quiz">quiz results</a></div>
+                <div class="link-block"><a href="https://planetcj.neocities.org/xtralinks">xtra links</a></div>
+                <div class="link-block"><a href="https://planetcj.neocities.org/">back to home</a></div>
+                <hr>
+
+                <b>log</b>
+                <div class="transmission">
+                    > user detected<br>
+                    > brainwash initiaing<br>
+                    > loading...<br>
+                    > loading...<br>
+                    > ERROR<br>
+                    > ... we couldn't confirm you had a brain to even control, bud...
+                </div>
+            </td>
+
+            <td class="content">
+                <h2>FUN SPACE FACT</h2>
+                <p>
+                    i honestly don't even like space that much. can't be convinced it's entirely real. well, i guess this webpage is as real as it'll ever get for me, thankfully. and for you, too, unless you're an astronaut-in-training. basically, i'm saying you're welcome. 
+                </p>
+
+                <div class="tape">
+                    WE COME IN PEACE
+                </div>
+
+                <p>
+                    do you think rick and morty or futurama achieved a better space vibe? or maybe a wild card pick, like the midnight gospel. fckn star wars. star trek, if you're a real dork. i guess it's equally possible that any of them are accurate. i mean, in the scheme of an infinite universe even the bad ideas get their own planet ;)
+                </p>
+
+                <p>
+                   unless you think the most acccurate depiction of space was guardians of the galaxy. then you might need to come back down to earth a bit
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        © 2006  (do copyrights still apply up in space?)     
+    </div>
+
+</div>
+
+<div class="relic" style="top: 500px; left: 150px;"  <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3a2FtNHBxdnFhbjV1NjhiaDhvZmhiajVnbGpzMGJ6b3F2dG1iMThrMSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/3o7TKA8zF1vMRSEhUI/giphy.gif"></div>
+<div class="relic" style="top: 650px; left: 500px;"></div>
+<div class="relic" style="top: 820px; left: 300px;"></div>
+
+<script>
+
+
+
+});
+</script>
+
+  
+  
+  
+  </body>
+</html>
