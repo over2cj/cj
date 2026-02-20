@@ -256,7 +256,7 @@ document.addEventListener("mousemove", e => {
     cursor.style.top = e.clientY - 7 + "px";
 });
 
-document.querySelectorAll('.scrap').forEach(el => {
+document.querySelectorAll('.dragthingie').forEach(el => {
     el.onmousedown = function(e) {
         let shiftX = e.clientX - el.getBoundingClientRect().left;
         let shiftY = e.clientY - el.getBoundingClientRect().top;
@@ -285,6 +285,7 @@ document.querySelectorAll('.scrap').forEach(el => {
   </body>
 
 </html>
+
 
 
 
